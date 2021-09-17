@@ -174,7 +174,7 @@ ul{
 
 
 .logo-img{
-  width:5rem;
+  max-width:3rem;
   
   opacity: 0.9;
 }

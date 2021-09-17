@@ -1,0 +1,232 @@
+/*temp*/
+/*body{
+    padding: 2rem 5rem;
+}*/
+
+/*fonts*/
+
+*,::after,::before{
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Karla:400|Spectral:400');
+
+html {font-size: 100%;} /*16px*/
+
+:root{
+    
+    /*###color setup###*/
+    --primary-100:#e0deff;
+    --primary-200:#c1beff;
+    --primary-300:#a29dff;
+    --primary-400:#837dff;
+    --primary-500:#645cff;
+    --primary-600:#504acc;
+    --primary-700:#3c3799;
+    --primary-800:#282566;
+    --primary-900:#141233;
+    /*grey*/
+    --grey-50:#F8FAFC;
+    --grey-100:#F1F5F9;
+    --grey-200:#E2E8F0;
+    --grey-300:#CBD5E1;
+    --grey-400:#94A3B8;
+    --grey-500:#64748B;
+    --grey-600:#475569;
+    --grey-700:#334155;
+    --grey-800:#1E293B;
+    --grey-900:#0F172A;
+    --black:#222;
+    --white:#fff;
+    --red-light:#f8d7da;
+    --red-dark:#842029;
+    --green-light:#d1e7dd;
+    --green-dark:#0f5132;
+    
+    /*###font setup###*/
+    --headingFont:'Spectral', serif;
+    --bodyFont:'Karla', sans-serif;
+    --smallText: 0.7em;
+    
+    /*rest of the vars*/
+    --backgrondColor:var(--grey-100);
+    --textColor:var(--grey-900);
+    --borderRadius: 0.25rem;
+    --letterSpaceing: 1px;
+    --transition: 0.3s ease-in-out all;
+    --max-width: 1120px;
+    --fixed-width:600px;
+
+    /*box shadow*/
+    --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0,0,0,0.06);
+    --shadow-2: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+    --shadow-3: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    --shadow-4: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+}
+
+body {
+  background: var(--backgrondColor);
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  line-height: 1.75;
+  color:var(--textColor);
+}
+
+p {
+    margin-bottom: 1.5rem;
+    max-width: 40em;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  margin-bottom: 1.38rem;
+  font-family: var(--headingFont);
+  font-weight: 400;
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {font-size: 2.441rem;}
+
+h3 {font-size: 1.953rem;}
+
+h4 {font-size: 1.563rem;}
+
+h5 {font-size: 1.25rem;}
+
+small, .text-small {font-size:  var(--smallText);}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
+/*##img class setup##*/
+.img{
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/*###default button*/
+.btn{
+  cursor: pointer;
+  color: var(--white);
+  background: var(--primary-500);
+  border: transparent;
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpaceing);
+  padding: 0.375rem 0.75rem;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+  text-transform: capitalize;
+  display: inline-block;
+}
+.btn:hover{
+  background: var(--primary-700);
+  box-shadow: var(--shadow-3);
+}
+
+
+
+/**project**/
+
+
+.container{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+
+}
+
+.block{
+  height: 100%;
+  min-width: 50%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/**first block**/
+.first-block{
+  background:linear-gradient(180deg, rgba(30,41,59,0.5991091314031181) 0%, rgba(30,41,59,0.6013363028953229) 100%), url(./monks\ resized.PNG) center/cover;
+  
+}
+.heading-title{
+  font-size: 3.052rem;
+  color:#eba63c;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+.logo-img{
+  width:5rem;
+  
+  opacity: 0.9;
+}
+.logo{
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
+/**second block**/
+.second-block{
+  background: var(--grey-800);
+  position: relative;
+  box-shadow: 0px 0px 40px 10px rgba(0,0,0,0.91);
+}
+.great{
+  color:#eba63c;
+  letter-spacing: 2px;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+}
+/**social icons**/
+.social-icons{
+    display: inline-flex;
+    
+    
+  }
+  .social-icon{
+    font-size: 2rem;
+    padding: 1rem;
+    color: #eba63c;
+  }
+
+  .social-icon:hover{
+    color: wheat;
+    transition: var(--transition);
+  }
+/**media**/
+  @media screen and (min-width:576px){
+    .container{
+      flex-direction: row;
+    }
+    .logo{
+      top: 1.7rem;
+      left: 1.7rem;
+    }
+    .heading-title{
+      font-size: 3.2rem;
+      letter-spacing: 3px;
+      text-decoration: underline;
+    }
+  }
+
+
+
